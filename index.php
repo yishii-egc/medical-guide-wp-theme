@@ -6,7 +6,7 @@ get_header(); ?>
                 <main>
                     <ol class="breadcrumb">
                         <li><a href="/"><span>お薬通販部トップ</span></a></li>
-                        <li><?php the_breadcrumbs() ?></li>
+                        <li><a href="/medecal-guide/"><span>メディカルガイド</span></a></li>
                     </ol><!--//breadcrumb end//-->
 
 
