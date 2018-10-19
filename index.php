@@ -6,13 +6,10 @@ get_header(); ?>
                 <main>
                     <ol class="breadcrumb">
                         <li><a href="/"><span>お薬通販部トップ</span></a></li>
-                        <li><a href="/medecal-guide/"><span>メディカルガイド</span></a></li>
+                        <li><a href="/medecal-guide/"><span>メディカルガイドtest</span></a></li>
                     </ol><!--//breadcrumb end//-->
-
-
                     <article class="documents">
                         <h1 class="topicBig">メディカルガイド</h1>
-
                         <section>
                           <ul id="mediBig">
                             <?php
