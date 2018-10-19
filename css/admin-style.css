@@ -1,0 +1,5 @@
+.mce-i-block-link:before {
+    content: '\f526';
+    -webkit-font-smoothing: antialiased;
+    font: normal 23px/1 'dashicons';
+}
