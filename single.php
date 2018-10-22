@@ -6,12 +6,10 @@ get_header();
         <div id="wrap">
             <div id="contents">
                 <main>
-
                     <ol class="breadcrumb">
                         <li><a href="/"><span>お薬通販部トップ</span></a></li>
                         <li><a href="/medical-guide/"><span>メディカルガイド</span></a></li>
-                        <li><?php the_breadcrumbs() ?></li>
-
+                        <li><?php the_title() ?></li>
                     </ol><!--//breadcrumb end//-->
 
                     <h1 class="topicBig"><?php the_title() ?></h1>

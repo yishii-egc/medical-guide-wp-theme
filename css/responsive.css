@@ -108,6 +108,13 @@
 @media (max-width: 800px) {
 
 }
+@media screen and (min-width: 768px) {
+  #header-nav {
+    position:  sticky;
+    top: 0;
+    z-index: 2;
+  }
+}
 
 @media (max-width: 767px) {
 
@@ -116,7 +123,10 @@
     }
 
     header {
-        height: 50px;
+      height: 50px;
+      position: sticky;
+      top: 0;
+      z-index: 2;
     }
 
     #headNav {
@@ -177,6 +187,11 @@
         height: 2px;
         margin: 3px 0;
     }
+  #header-nav {
+    position:  sticky;
+    top: 50px;
+    z-index: 2;
+  }
 
     .breadcrumb {
         margin: 0;

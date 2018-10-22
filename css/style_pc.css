@@ -1919,10 +1919,6 @@ ul.topNav a:hover {
     color: #959fa5;
 }
 
-.breadcrumb li:last-of-type {
-    font-weight: bold;
-}
-
 .breadcrumb li:last-of-type:after {
     position: absolute;
     content: '';
@@ -1931,24 +1927,7 @@ ul.topNav a:hover {
 }
 
 .breadcrumb li a {
-    color: #000;
     text-decoration: none;
-}
-
-.breadcrumb li:first-of-type a {
-    position: relative;
-    padding-left: 17px;
-    color: #0EA53C;
-}
-
-.breadcrumb li:first-of-type a:before {
-    position: absolute;
-    font-family: 'FontAwesome';
-    content: '\f015';
-    top: 50%;
-    left: 0;
-    margin-top: -13px;
-    font-size: 1.2em;
 }
 
 /*--------------------------------------------------*/
