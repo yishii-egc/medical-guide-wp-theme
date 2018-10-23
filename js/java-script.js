@@ -1,4 +1,32 @@
 /*--------------------------------------------------*/
+/*  ヘッダー固定                                    */
+/*--------------------------------------------------*/
+//$(function () {
+//    var $win = $(window),
+//        $main = $('main'),
+//        $nav = $('#header-nav'),
+//        navHeight = $nav.outerHeight(),
+//        navPos = $nav.offset().top,
+//        fixedClass = 'is-fixed';
+//
+//    $win.on('load scroll', function () {
+//        var value = $(this).scrollTop();
+//        if (value > navPos) {
+//            $nav.addClass(fixedClass);
+//            $main.css('padding-top', navHeight);
+//        } else {
+//            $nav.removeClass(fixedClass);
+//            $main.css('padding-top', '0');
+//        }
+//    });
+//
+//    $(window).on("scroll", function () {
+//        $("#header-nav").css("left", -$(window).scrollLeft());
+//    });
+//});
+
+
+/*--------------------------------------------------*/
 /*  内部リンク高さ確保                              */
 /*--------------------------------------------------*/
 $(function () {
@@ -6,12 +34,36 @@ $(function () {
         var speed = 400;
         var href = $(this).attr("href");
         var target = $(href == "#" || href == "" ? 'html' : href);
-        var headerHeight = 60; //固定ヘッダーの高さ
+        var headerHeight = 80; //固定ヘッダーの高さ
         var position = target.offset().top - headerHeight; //ターゲットの座標からヘッダの高さ分引く
         $('body,html').animate({scrollTop: position}, speed, 'swing');
         return false;
     });
 });
+
+/*--------------------------------------------------*/
+/*  外部ページからのスムーススクロールリンク高さ確保        */
+/*--------------------------------------------------*/
+$(function(){
+  var urlHash = location.hash;
+  if(urlHash) {
+      $('body,html').stop().scrollTop(0);
+      setTimeout(function(){
+          var target = $(urlHash);
+          var headerHeight = 80; //固定ヘッダーの高さ
+          var position = target.offset().top - headerHeight;
+          $('body,html').stop().animate({scrollTop:position}, 400);
+      }, 100);
+  }
+});
+  $('a[href^="#"]').click(function() {
+      var href= $(this).attr("href");
+      var target = $("href");
+      var headerHeight = 80; //固定ヘッダーの高さ
+      var position = target.offset().top - headerHeight;
+      $('body,html').stop().animate({scrollTop:position}, 400);
+  });
+
 
 /*--------------------------------------------------*/
 /*  ページ上部へ                                    */
@@ -37,7 +89,7 @@ $(function () {
 });
 
 
-/*--------------------------------------------------*/
+//*--------------------------------------------------*/
 /* navプルダウンメニュー                            */
 /*--------------------------------------------------*/
 $(function () {

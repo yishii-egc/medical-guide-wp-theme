@@ -22,23 +22,24 @@
         適切にこのページ表示する場合は、JavaScriptを有効にするか、JavaScriptに対応しているブラウザでご覧下さい。</p>
 </noscript>
 <header id="header">
-  <div id="headNav">
-    <div class="L"><a href="<?= MAIN_SITE_URL ?>/"><img src="/img/base/logo1.png" alt="お薬通販部"></a></div>
-    <div class="R">
-      <img class="order" src="/img/base/phone-order.JPG" alt="050-5806-4632">      <div id="headRT" class="s-action-toolbar">
-        <div class="boxT none">
-          <a class="icon01" href="<?= MAIN_SITE_URL ?>/cart.php">カートを見る</a>
-          <a class="icon02" href="<?= MAIN_SITE_URL ?>/contact.php">お問い合わせ</a>
-          <a class="icon03" href="#login_window">ログイン</a>
-        </div>
-      </div><!--//#headRT end//-->
-    </div><!--//.R end//-->
-    <a href="#" id="header-btn-menu" class="btn-menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </a>
-  </div><!--//#headNav end//-->
+    <div id="headNav">
+        <div class="L"><a href="<?= MAIN_SITE_URL ?>/"><img src="/img/base/logo1.png" alt="お薬通販部"></a></div>
+        <div class="R">
+            <div id="headRT" class="s-action-toolbar">
+                <div class="boxT none">
+                    <a class="icon01" href="<?= MAIN_SITE_URL ?>/cart.php">カートを見る</a>
+                    <a class="icon02" href="<?= MAIN_SITE_URL ?>/contact.php">お問い合わせ</a>
+                    <a class="icon03" href="#login_window">ログイン</a>
+                </div>
+
+            </div><!--//#headRT end//-->
+        </div><!--//.R end//-->
+        <a href="#" id="header-btn-menu" class="btn-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+    </div><!--//#headNav end//-->
 </header>
 
 

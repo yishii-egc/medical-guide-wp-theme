@@ -8083,6 +8083,7 @@ a.blockLink img{
 #contents .feature-image img{
     max-width: 460px;
     padding-bottom: 10px;
+    width: 100%;
 }
 .noborder{
     border: none !important;
