@@ -177,7 +177,11 @@
         height: 100%;
         padding: 3px 10px;
         z-index: 55;
+        background: #FFF;
         border-left: 1px solid #191970;
+        border-bottom: none;
+        border-right: none;
+        border-top: none;
     }
 
     #headNav .btn-menu span {

@@ -1,69 +1,30 @@
 /*--------------------------------------------------*/
-/*  ヘッダー固定                                    */
-/*--------------------------------------------------*/
-//$(function () {
-//    var $win = $(window),
-//        $main = $('main'),
-//        $nav = $('#header-nav'),
-//        navHeight = $nav.outerHeight(),
-//        navPos = $nav.offset().top,
-//        fixedClass = 'is-fixed';
-//
-//    $win.on('load scroll', function () {
-//        var value = $(this).scrollTop();
-//        if (value > navPos) {
-//            $nav.addClass(fixedClass);
-//            $main.css('padding-top', navHeight);
-//        } else {
-//            $nav.removeClass(fixedClass);
-//            $main.css('padding-top', '0');
-//        }
-//    });
-//
-//    $(window).on("scroll", function () {
-//        $("#header-nav").css("left", -$(window).scrollLeft());
-//    });
-//});
-
-
-/*--------------------------------------------------*/
-/*  内部リンク高さ確保                              */
+/*  スムーススクロールリンク高さ確保        */
 /*--------------------------------------------------*/
 $(function () {
-    $('a[href^="#"]').click(function () {
-        var speed = 400;
-        var href = $(this).attr("href");
-        var target = $(href == "#" || href == "" ? 'html' : href);
-        var headerHeight = 80; //固定ヘッダーの高さ
-        var position = target.offset().top - headerHeight; //ターゲットの座標からヘッダの高さ分引く
-        $('body,html').animate({scrollTop: position}, speed, 'swing');
-        return false;
-    });
-});
-
-/*--------------------------------------------------*/
-/*  外部ページからのスムーススクロールリンク高さ確保        */
-/*--------------------------------------------------*/
-$(function(){
+  var w = $(window).width();
+  var x = 767;
+  if (w <= x) { //ウィンドウ幅767px以下の時{
+    var headerHeight = 120;
+  } else { //それ以外の時
+    var headerHeight = 80;
+  }
+  //var headerHeight = $('.site-header').outerHeight();
   var urlHash = location.hash;
   if(urlHash) {
       $('body,html').stop().scrollTop(0);
       setTimeout(function(){
           var target = $(urlHash);
-          var headerHeight = 80; //固定ヘッダーの高さ
           var position = target.offset().top - headerHeight;
           $('body,html').stop().animate({scrollTop:position}, 400);
       }, 100);
   }
-});
   $('a[href^="#"]').click(function() {
       var href= $(this).attr("href");
-      var target = $("href");
-      var headerHeight = 80; //固定ヘッダーの高さ
+      var target = $(href);
       var position = target.offset().top - headerHeight;
-      $('body,html').stop().animate({scrollTop:position}, 400);
-  });
-
+      $('body,html').stop().animate({scrollTop:position}, 400);  });
+});
 
 /*--------------------------------------------------*/
 /*  ページ上部へ                                    */
@@ -727,12 +688,12 @@ $(function () {
 /*--------------------------------------------------*/
 /*  郵便番号住所自動入力                  　　　    */
 /*--------------------------------------------------*/
-$(window).ready(function () {
-    $("#postalcode").jpostal({
-        postcode: ["#postalcode"],
-        address: {"#address": "%3%4%5"}
-    });
-});
+//$(window).ready(function () {
+//    $("#postalcode").jpostal(function(){
+//        postcode: ["#postalcode"],
+//        address: {"#address": "%3%4%5"}
+//    });
+//});
 
 
 /*--------------------------------------------------*/
@@ -957,14 +918,14 @@ var mobileMenu = {
     },
     open: function (menu) {
         if (!$('body').hasClass('menu-opened')) {
-            $('body').addClass('menu-opened')
-            $(menu).addClass('active')
+            $('body').addClass('menu-opened');
+            $(menu).addClass('active');
         }
     },
     close: function (menu) {
         if ($('body').hasClass('menu-opened')) {
-            $('body').removeClass('menu-opened')
-            $(menu).removeClass('active')
+            $('body').removeClass('menu-opened');
+            $(menu).removeClass('active');
         }
     }
 }

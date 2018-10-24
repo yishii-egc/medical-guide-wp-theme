@@ -34,11 +34,11 @@
 
             </div><!--//#headRT end//-->
         </div><!--//.R end//-->
-        <a href="#" id="header-btn-menu" class="btn-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </a>
+        <button id="header-btn-menu" class="btn-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
     </div><!--//#headNav end//-->
 </header>
 
