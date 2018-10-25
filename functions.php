@@ -166,6 +166,7 @@ function register_shortcodes(){
     add_shortcode('related-articles', 'get_related_articles');
 }
 
+remove_action('wp_head', 'wp_generator');
 
 function get_rank_products(){
     return load_template_part('template-parts/content', 'rank-products');
