@@ -901,7 +901,6 @@ var mobileMenu = {
         var _this = this;
         $('body').on('click', '#header .btn-menu', function (e) {
             e.preventDefault()
-            console.log('open')
             _this.open('#global-nav')
         })
 
