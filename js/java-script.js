@@ -12,18 +12,27 @@ $(function () {
   //var headerHeight = $('.site-header').outerHeight();
   var urlHash = location.hash;
   if(urlHash) {
-      $('body,html').stop().scrollTop(0);
-      setTimeout(function(){
-          var target = $(urlHash);
-          var position = target.offset().top - headerHeight;
-          $('body,html').stop().animate({scrollTop:position}, 400);
-      }, 100);
-  }
-  $('a[href^="#"]').click(function() {
-      var href= $(this).attr("href");
-      var target = $(href);
+    $('body,html').stop().scrollTop(0);
+    setTimeout(function(){
+      var target = $(urlHash);
       var position = target.offset().top - headerHeight;
-      $('body,html').stop().animate({scrollTop:position}, 400);  });
+      $('body,html').stop().animate({scrollTop:position}, 400);
+    }, 100);
+  }
+});
+$('a[href^="#"]').click(function(){
+  var w = $(window).width();
+  var x = 767;
+  if (w <= x) { //ウィンドウ幅767px以下の時{
+    var headerHeight = 120;
+  } else { //それ以外の時
+    var headerHeight = 80;
+  }
+  var href= $(this).attr("href");
+  var target = $(href == "#" || href == "" ? 'html' : href);
+  var position = target.offset().top-headerHeight; //ヘッダの高さ分位置をずらす
+  $("html, body").animate({scrollTop:position}, 400, "swing");
+  return false;
 });
 
 /*--------------------------------------------------*/
@@ -713,23 +722,6 @@ $(function () {
     });
 });
 
-/*  マイページお知らせ
-============================== */
-$(function () {
-    $(".noticeBox").each(function () {
-        var n = $(".noticeBox li").length;
-        if (0 < n) {
-            $(".noticeBox li").eq(0).addClass("open");
-        }
-    });
-});
-$(function () {
-    $(".noticeBox li .topic").on("click", function () {
-        $(this).next().slideToggle();
-        $(this).parent().toggleClass("open");
-    });
-});
-
 
 /*--------------------------------------------------*/
 /*  サイドバー固定                                  */
@@ -902,6 +894,8 @@ function windowWidth() {
     return window.innerWidth;
 }
 
+
+
 var mobileMenu = {
     init: function () {
         var _this = this;
@@ -929,6 +923,7 @@ var mobileMenu = {
         }
     }
 }
+
 
 var footerStickyElements = function () {
     var toolbar = $('#action-toolbar-mobile');

@@ -110,13 +110,14 @@
 }
 @media screen and (min-width: 768px) {
   #header-nav {
+    position:  -webkit-sticky;
     position:  sticky;
     top: 0;
     z-index: 2;
   }
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
 
     body, h1, h2, h3, h4, h5, h6, p, address, ul, ol, li, dl, dt, dd, header, footer, hgroup, section, article, table, th, td, img, form, map, fieldset, caption {
         font-size: 14px;
@@ -124,6 +125,7 @@
 
     header {
       height: 50px;
+      position:  -webkit-sticky;
       position: sticky;
       top: 0;
       z-index: 2;
@@ -192,6 +194,7 @@
         margin: 3px 0;
     }
   #header-nav {
+    position:  -webkit-sticky;
     position:  sticky;
     top: 50px;
     z-index: 2;
@@ -309,6 +312,10 @@
 
     #global-nav {
         display: block;
+    }
+    #global-nav .btn-close {
+      background: none;
+      border: none;
     }
 
     #action-toolbar-mobile {

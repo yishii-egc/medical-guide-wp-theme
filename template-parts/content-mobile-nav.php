@@ -1,5 +1,7 @@
 <nav id="global-nav">
-    <a href="#" class="btn-close"><i class="fa fa-times"></i></a>
+    <button class="btn-close">
+      <i class="fa fa-times"></i>
+    </button>
     <div class="login">
         <p class="sentence">お薬通販部で薬を買う</p>
         <form method="GET" action="/login.php">
