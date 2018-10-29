@@ -6,7 +6,7 @@ get_header(); ?>
                 <main>
                     <ol class="breadcrumb">
                       <li><a href="/"><span>お薬通販部トップ</span></a></li>
-                      <li><span>メディカルガイドtest</span></li>
+                      <li><span>メディカルガイド</span></li>
                     </ol><!--//breadcrumb end//-->
                     <article class="documents">
                         <h1 class="topicBig">メディカルガイド</h1>
